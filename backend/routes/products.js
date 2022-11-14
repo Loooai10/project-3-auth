@@ -1,13 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const ProductsController = require('../controllers/products')
+const productsController = require('../controllers/products')
 // We import our controller functions above
 
 //Require isloggedIn Middleware.
 const isloggedIn = require('../helper/isloggedIn')
 
 // We define the routes and controllers
-router.get('/products', isloggedin,productsController.getAllProducts)
+router.get('/products', isloggedIn,productsController.getAllProducts)
 router.get('/products/:_id', productsController.getAllProducts)
 
 router.post('/products',isloggedIn, productsController.createProduct)

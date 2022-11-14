@@ -21,10 +21,10 @@ export default function Signup(props) {
         <h1>Signup</h1>
 
         <Container>
-            <Form.Group>
+            {/* <Form.Group>
                 <Form.Label>Name</Form.Label>
                 <Form.Control name="name" onChange={changeHandler}></Form.Control>
-            </Form.Group>
+            </Form.Group> */}
 
             <Form.Group>
                 <Form.Label>Username</Form.Label>

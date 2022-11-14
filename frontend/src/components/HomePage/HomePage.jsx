@@ -57,7 +57,7 @@ function HomePage() {
     }
     return (
       <div>
-      Twitter
+    BootBear
     {/* Form - 1 Input -> content */}
       <form onSubmit={handleSubmit}>
         <label>Whats happening?</label><br></br>
@@ -77,11 +77,11 @@ function HomePage() {
 
 
     {/* tweets[].map( .. .. .) */}
-    {ProductsList.length ? ProductsList.map(product => 
+    {productsList.length ? productsList.map(product => 
       <div key={product._id}>
         <Link to={`/edit/${product._id}`}>{product._id}</Link>
         <p>Name: {product.name}</p>
-        <p><Product></Product>: {product.content}</p>
+        <p>{product.content}</p>
       </div>
     )
     : null}

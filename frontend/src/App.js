@@ -33,7 +33,7 @@ function App() {
   
 
   const registerHandler = (user) => {
-    axios.post("http://localhost:4000/users", user)
+    axios.post("http://localhost:4000/auth/signup", user)
     .then(res => {
       console.log(res);
     })
