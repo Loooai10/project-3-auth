@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Container, Form, Button} from "react-bootstrap";
+import { useNavigate } from 'react-router-dom'
 
 export default function Signup(props) {
 
@@ -12,8 +13,12 @@ export default function Signup(props) {
         setNewUser(user);
     }
 
-    const regsiterHandler = () => {
+    const navigate = useNavigate()
+
+    const regsiterHandler = (e) => {
+        e.preventDefault()
         props.register(newUser)
+        navigate('/profile')
     }
 
   return (
