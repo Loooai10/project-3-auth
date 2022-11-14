@@ -1,0 +1,39 @@
+
+1. index.js -> Setup our server
+2. install packages:
+    -express, 
+    -mongoose ...
+3. Create a folder for Routes/ Controllers/Config/Model
+4. Creat the following files:
+    - Model/Tweet.js
+    - controllers/tweets.js
+    - routes/tweets.js
+    - config/database.js
+    - seeds.js
+    - .env 
+
+5. Code the basic skeleton for the files in this order:
+    1. config//database.js -> connnect to DB
+    2. modles/Tweet.js
+    3. routes/tweets.js (and register route in index.js)
+    4. controllers/tweets.js -> get All/get Detail
+    6. Introduce a Users Model
+    - Associate the User Model with the Tweet Model using referencing 
+        - Create a new file -> models/User.js
+        - Create a new User schema and model
+        - Add tweets property to reference the Tweet model
+    - 1 User has Many Tweets
+
+    Stories:
+    - As a User, I want to see all the tweets for a particular user
+    - As a User, I want to create a new tweet
+    Stories:
+    - As a User, I want to create a new tweet
+        - Create a User Controller file & User Router file
+
+        - POST /users ---> createUser 
+
+        - POST /users/tweets ---> createUserTweet
+    - As a User, I want to see all the tweets for a particular user
+        - GET /users/tweets route ---> getUserTweets
+
