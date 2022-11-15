@@ -7,10 +7,10 @@ const productsController = require('../controllers/products')
 const isloggedIn = require('../helper/isloggedIn')
 
 // We define the routes and controllers
-router.get('/products', isloggedIn,productsController.getAllProducts)
+router.get('/products',productsController.getAllProducts)
 router.get('/products/:_id', productsController.getAllProducts)
 
-router.post('/products',isloggedIn, productsController.createProduct)
+router.post('/products', productsController.createProduct)
 
 //route to update a tweet
 //router.put('/tweets/:id', tweetsController.updateTweet)
